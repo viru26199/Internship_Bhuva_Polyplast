@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    tools:context=".MainActivity"
+    tools:targetApi="23">
+    <!--android:background="@drawable-v24/background1"-->
+
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/location"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapEmpNameTextView"
+        android:text="@string/defaultEmployee"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="320dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapTaskNameTextView"
+        android:text="@string/defaultTask"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mapEmpNameTextView"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <!--Ok will be working on this building off the old stop watch program: Kevin C.-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startButton"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/mapTaskNameTextView"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/start"
+        android:onClick="startTimer"
+        android:background="@color/green" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapTimer"
+        android:text="@string/defaultTimer"
+        android:textSize="30sp"
+        android:layout_below="@+id/mapTaskNameTextView"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopButton"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/mapTaskNameTextView"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="275dp"
+        android:text="@string/stop"
+        android:onClick="stopTimer"
+        android:background="@color/red" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showButton"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/mapTaskNameTextView"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/show"
+        android:onClick="showTime"
+        android:background="@color/red" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetButton"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/mapTaskNameTextView"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="275dp"
+        android:text="@string/reset"
+        android:onClick="resetTimer"
+        android:background="@color/green" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapExitButton"
+        android:layout_below="@+id/mapTimer"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="changeView"/>
+</RelativeLayout>
